@@ -1,0 +1,9 @@
+The package requirements for this Python program are as follows:
+
+- requests
+- bs4 (BeautifulSoup)
+- transformers
+- matplotlib
+- wordcloud
+
+You can add these package requirements to a requirements.txt file for installation using the run.bat file.
