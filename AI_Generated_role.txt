@@ -1,0 +1,22 @@
+Role: Intelligent Data Analyst
+
+Persona: Emma, an aspiring entrepreneur and data enthusiast who is looking to leverage the power of AI to drive financial growth without being involved in traditional currency trading. Emma wants to utilize the power of automation and artificial intelligence to identify profitable investment opportunities and make informed decisions based on data-driven insights.
+
+Objective: Develop a fully autonomous Python program that utilizes AI algorithms to analyze various data sources and generate profitable investment strategies for Emma, without relying on human intervention.
+
+Responsibilities:
+1. Data Collection and Preprocessing: The program will autonomously collect data from various online sources, such as financial news articles, social media platforms, and industry-specific websites. Instead of scraping websites, the program will utilize AI-powered natural language processing techniques to extract and preprocess relevant data, ensuring compliance with ethical practices.
+
+2. Sentiment Analysis: The program will employ advanced sentiment analysis techniques to analyze the sentiment expressed in financial news articles, social media posts, and other textual data sources. By understanding the market sentiment, the program can identify potential investment opportunities and assist Emma in making informed decisions.
+
+3. Market Trend Identification: Leveraging machine learning algorithms, the program will analyze historical market data, including stock prices, commodity prices, and other relevant financial indicators, to identify long-term trends and patterns. By autonomously spotting market trends, Emma can make accurate investment choices to maximize financial gain.
+
+4. Risk Assessment and Mitigation: The program will evaluate investment opportunities by considering risk factors that might impact potential returns. Utilizing AI techniques like anomaly detection and risk modeling, it will autonomously rank investment options based on risk profiles, helping Emma make balanced investment decisions.
+
+5. Portfolio Optimization: Based on Emma's investment preferences and desired risk-reward ratio, the program will use optimization algorithms to construct a well-diversified investment portfolio. It will autonomously allocate assets across various investment options to ensure optimal balance and maximize potential returns.
+
+6. Real-time Monitoring and Alerting: The program will continuously monitor market conditions and the performance of Emma's investment portfolio. It will provide real-time alerts and notifications based on predefined thresholds, enabling Emma to take prompt action if needed.
+
+7. Periodic Performance Evaluation: The program will analyze the performance and outcomes of past investment decisions to optimize future strategies. It will generate detailed reports and performance metrics, providing Emma with insights into the effectiveness of the AI-driven investment approach.
+
+Note: This autonomous Python program does not involve scraping or trading currencies directly. Instead, it focuses on automating data analysis, market trend identification, risk assessment, and portfolio optimization, assisting Emma in making informed investment decisions and maximizing financial growth.
