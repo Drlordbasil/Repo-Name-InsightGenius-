@@ -4,6 +4,7 @@ from transformers import pipeline
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
+
 class SearchQueryGenerator:
     def __init__(self, topics):
         self.topics = topics
@@ -12,12 +13,14 @@ class SearchQueryGenerator:
         query = ' '.join(self.topics)
         return query
 
+
 class WebContentExtractor:
     def __init__(self):
         self.urls = []
 
     def extract_urls(self, search_query):
-        response = requests.get(f"https://www.google.com/search?q={search_query}")
+        response = requests.get(
+            f"https://www.google.com/search?q={search_query}")
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             result_divs = soup.find_all('div', class_='r')
@@ -30,6 +33,7 @@ class WebContentExtractor:
             text = soup.get_text()
             metadata = {'text': text}
             return metadata
+
 
 class TextualContentAnalyzer:
     def __init__(self):
@@ -48,6 +52,7 @@ class TextualContentAnalyzer:
     def generate_summary(self, text):
         pass
 
+
 class ImageVideoAnalyzer:
     def __init__(self):
         self.openai_model_name = "your_openai_model_name"
@@ -57,6 +62,7 @@ class ImageVideoAnalyzer:
 
     def analyze_video(self, video_url):
         pass
+
 
 class DataVisualizer:
     def generate_word_cloud(self, text):
@@ -71,12 +77,14 @@ class DataVisualizer:
     def generate_image_collage(self, image_urls):
         pass
 
+
 class InsightsGenerator:
     def generate_insights(self, analyzed_text):
         pass
 
     def generate_recommendations(self, analyzed_text):
         pass
+
 
 class ContinuousLearner:
     def __init__(self):
@@ -88,7 +96,9 @@ class ContinuousLearner:
     def update_models(self):
         pass
 
-search_query_generator = SearchQueryGenerator(["Python programming", "Data science"])
+
+search_query_generator = SearchQueryGenerator(
+    ["Python programming", "Data science"])
 search_query = search_query_generator.generate_search_query()
 
 web_content_extractor = WebContentExtractor()
@@ -102,9 +112,11 @@ if urls:
 
     for url in urls:
         metadata = web_content_extractor.extract_metadata(url)
-        sentiment_analysis_results = textual_content_analyzer.perform_sentiment_analysis(metadata['text'])
+        sentiment_analysis_results = textual_content_analyzer.perform_sentiment_analysis(
+            metadata['text'])
         insights = insights_generator.generate_insights(metadata['text'])
-        recommendations = insights_generator.generate_recommendations(metadata['text'])
+        recommendations = insights_generator.generate_recommendations(
+            metadata['text'])
 
         print(f"URL: {url}")
         print(f"Sentiment Analysis: {sentiment_analysis_results}")
