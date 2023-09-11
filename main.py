@@ -112,23 +112,25 @@ if urls:
 
     for url in urls:
         metadata = web_content_extractor.extract_metadata(url)
-        sentiment_analysis_results = textual_content_analyzer.perform_sentiment_analysis(
-            metadata['text'])
-        insights = insights_generator.generate_insights(metadata['text'])
-        recommendations = insights_generator.generate_recommendations(
-            metadata['text'])
+        if metadata:
+            sentiment_analysis_results = textual_content_analyzer.perform_sentiment_analysis(
+                metadata['text'])
+            insights = insights_generator.generate_insights(metadata['text'])
+            recommendations = insights_generator.generate_recommendations(
+                metadata['text'])
 
-        print(f"URL: {url}")
-        print(f"Sentiment Analysis: {sentiment_analysis_results}")
-        print(f"Insights: {insights}")
-        print(f"Recommendations: {recommendations}")
-        print()
+            print(f"URL: {url}")
+            print(f"Sentiment Analysis: {sentiment_analysis_results}")
+            print(f"Insights: {insights}")
+            print(f"Recommendations: {recommendations}")
+            print()
 
     continuous_learner = ContinuousLearner()
     continuous_learner.receive_feedback(5)
     continuous_learner.update_models()
 
-data_visualizer = DataVisualizer()
-data_visualizer.generate_word_cloud(metadata['text'])
-data_visualizer.generate_sentiment_analysis_chart(sentiment_analysis_results)
-data_visualizer.generate_image_collage([url1, url2, url3])
+    data_visualizer = DataVisualizer()
+    data_visualizer.generate_word_cloud(metadata['text'])
+    data_visualizer.generate_sentiment_analysis_chart(
+        sentiment_analysis_results)
+    data_visualizer.generate_image_collage(urls)
